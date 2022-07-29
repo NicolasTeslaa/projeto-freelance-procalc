@@ -1,0 +1,57 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Clientes</li>
+    </ol>
+</nav>
+<div class=" d-flex flex-row-reverse">
+
+    <!-- [disabled]="!loginForm.valid" routerLink="dashboard" -->
+    <button routerLink="/cliente-add" class="btn btn-primary ">Cadastrar novo cliente</button>
+
+</div>
+<div class="card mt-2">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Celular</th>
+                <th>Email</th>
+                <th>Data de Nascimento</th>
+                <th>Idade</th>
+                <th>Procedimento Prévio</th>
+
+            </tr>
+        </thead>
+        <tbody class="card-body">
+            <tr>
+                <th scope="row">Ronaldo</th>
+                <td>102.325.123-12</td>
+                <td>(11) 94535-8672</td>
+                <td>arnaldo@icloud.com</td>
+                <td>18/12/1931</td>
+                <td>32</td>
+                <td>Ortodontia</td>
+            </tr>
+            <tr>
+                <th scope="row">Ronaldo</th>
+                <td>102.325.123-12</td>
+                <td>(11) 94535-8672</td>
+                <td>arnaldo@icloud.com</td>
+                <td>18/12/1931</td>
+                <td>32</td>
+                <td>Ortodontia</td>
+            </tr>
+            <tr>
+                <th scope="row">Ronaldo</th>
+                <td>102.325.123-12</td>
+                <td>(11) 94535-8672</td>
+                <td>arnaldo@icloud.com</td>
+                <td>18/12/1931</td>
+                <td>32</td>
+                <td>Ortodontia</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

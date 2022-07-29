@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DBwzOoKJOWkSGpQn/+9u+UzPvM54+qpeAPYw2MkLo4I=",
+  "Source": "ProCalc.API",
+  "BasePath": "_content/ProCalc.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

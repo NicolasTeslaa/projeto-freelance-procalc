@@ -1,0 +1,43 @@
+<div class="w-100 d-flex align-items-center justify-content-center mt-5">
+
+    <div class="card w-50">
+        <div class="card-header text-center">
+            <h5>Bem vindo ao ProCalc v0.0.1</h5>
+        </div>
+
+        <form class="card-body mb-5 needs-validation" novalidate #loginForm="ngForm">
+            <div class="card-body d-flex row">
+                <div class="form-group ">
+                    <input type="email" name="email" [(ngModel)]="loginUsuario.email" name="email" required class="form-control"
+                        id="txtEmail" aria-describedby="emailHelp" placeholder="Usuario">
+                    <div class="valid-feedback">
+                        Preenchido Corretamente
+                    </div>
+                    <div class="invalid-feedback">
+                        Preencha este campo
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="password" name="pass" [(ngModel)]="loginUsuario.password" name="password" required class="form-control"
+                        id="txtPass" placeholder="Senha">
+                    <div class="valid-feedback">
+                        Preenchido Corretamente
+                    </div>
+                    <div class="invalid-feedback">
+                        Preencha este campo
+                    </div>
+                </div>
+
+                <div class="loginbutton d-flex flex-row-reverse">
+
+                    <!-- [disabled]="!loginForm.valid" routerLink="dashboard" -->
+                    <button (click)="validate()" type="submit" class="btn btn-primary mt-2">Login
+                        <i class="fa-solid fa-angle-right"></i></button>
+                </div>
+
+                <a class="mt-3 text-center text-decoration-none text-dark">Esqueci minha Senha</a>
+            </div>
+        </form>
+    </div>
+
+</div>

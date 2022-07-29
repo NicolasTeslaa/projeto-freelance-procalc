@@ -1,0 +1,135 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Home</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/clientes']" routerLinkActive="router-link-active">Clientes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novo Cliente</li>
+    </ol>
+</nav>
+<div class="card">
+    <div class="card-header">
+        Cadastro de Pacientes
+    </div>
+    <div class="card-body">
+        <form form="formcadastroclientes" class="needs-validation">
+            <div class="row">
+
+                <div class="col-sm-8">
+                    <!-- NOME E CPF -->
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label for="exampleInputEmail1" class="form-label">Nome Completo *</label>
+                            <input required type="text" [(ngModel)]="cliente.nomeCompleto" name="nomeCompleto" class="form-control" placeholder="" aria-label="First name" id="name">
+                            <div class="valid-feedback">
+                                Campo Preenchido Corretamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Preencha este campo
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="exampleInputEmail1" class="form-label">CPF *</label>
+                            <input id="cpf" [(ngModel)]="cliente.CPF" name="CPF" mask="000.000.000-99" type="text" class="form-control" required placeholder="" >
+                            <div class="valid-feedback">
+                                Campo Preenchido Corretamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Preencha este campo
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-2">
+                            <label for="exampleInputEmail1" class="form-label">Celular *</label>
+                            <input required type="text" [(ngModel)]="cliente.celular" name="celular" mask="(00) 0.0000-0000" class="form-control">
+                            <div class="valid-feedback">
+                                Campo Preenchido Corretamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Preencha este campo
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="exampleInputEmail1" class="form-label">Email *</label>
+                            <input required type="email" [(ngModel)]="cliente.email" name="email" class="form-control">
+                            <div class="valid-feedback">
+                                Campo Preenchido Corretamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Email Inválido
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="exampleInputEmail1" class="form-label">Data Nascimento *</label>
+                            <input mask="00/00/0000" [(ngModel)]="cliente.dataNascimento" name="dataNascimento" required type="text" class="form-control">
+                            <div class="valid-feedback">
+                                Campo Preenchido Corretamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Preencha este campo
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="exampleInputEmail1" class="form-label">Idade</label>
+                            <input disabled type="text" class="form-control">
+                            <div class="valid-feedback">
+                                Campo Preenchido Corretamente
+                            </div>
+                            <div class="invalid-feedback">
+                                Preencha este campo
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ANOTACOES -->
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleInputEmail1" class="no-validate form-label">Anotações</label>
+                            <input type="text" [(ngModel)]="cliente.anotacoes" name="anotacoes" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleInputEmail1" class="form-label">Procedimento Previo</label>
+                            <input type="text" [(ngModel)]="cliente.procedimentosPrevio" name="procedimentosPrevio" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+
+                    <div class="mt-2 d-flex flex-row-reverse">
+
+                        <button (click)="validate()" class="mt-4 btn btn-primary align-items-end">Salvar</button>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="card h-50">
+                        <div class="card-header">
+                            Adicione imagem do Paciente
+                        </div>
+                        <div class="card-body h-50 text-center">
+                        </div>
+
+                        <div class="card-footer align-items-center d-flex justify-content-center">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
